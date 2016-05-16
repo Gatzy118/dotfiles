@@ -99,7 +99,6 @@ function! SuperCleverTab()
     if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
         return "\<Tab>"
     else
-        if
         if &omnifunc != ''
             return "\<C-x>\<C-O>"
         elseif &dictionary != ''
