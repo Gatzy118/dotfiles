@@ -1,6 +1,8 @@
 " Pathogen 'Package Manager'
 execute pathogen#infect()
 
+:set backspace=indent,eol,start
+
 " Mouse
 set ttyfast
 set mouse=a
@@ -97,8 +99,9 @@ function! SuperCleverTab()
     if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
         return "\<Tab>"
     else
+        if
         if &omnifunc != ''
-            return "/<C-x>\<C-O>"
+            return "\<C-x>\<C-O>"
         elseif &dictionary != ''
             return "\<C-K>"
         else
