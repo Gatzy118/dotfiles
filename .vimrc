@@ -11,6 +11,7 @@ set ttymouse=xterm2
 " Solarized Dark
 set background=dark
 colorscheme solarized
+set t_Co=256
 
 " General
 syntax on
